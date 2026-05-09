@@ -65,28 +65,28 @@ function Doodle({ type, style }: { type: DoodleType, style?: React.CSSProperties
           <circle cx="30" cy="20" r="10" stroke="black" strokeWidth="2" />
           <line x1="30" y1="30" x2="30" y2="60" stroke="black" strokeWidth="2" />
           <motion.line 
-            x1="30" y1="40" x2="10" y2="50" 
+            x1={30} y1={40} x2={10} y2={50} 
             stroke="black" strokeWidth="2" 
-            animate={{ x2: [10, 50], y2: [50, 40] }}
-            transition={{ duration: 0.5, repeat: Infinity, repeatType: "mirror" }}
+            animate={{ x2: [10, 50, 10], y2: [50, 40, 50] }}
+            transition={{ duration: 0.5, repeat: Infinity }}
           />
           <motion.line 
-            x1="30" y1="40" x2="50" y2="50" 
+            x1={30} y1={40} x2={50} y2={50} 
             stroke="black" strokeWidth="2" 
-            animate={{ x2: [50, 10], y2: [50, 40] }}
-            transition={{ duration: 0.5, repeat: Infinity, repeatType: "mirror" }}
+            animate={{ x2: [50, 10, 50], y2: [50, 40, 50] }}
+            transition={{ duration: 0.5, repeat: Infinity }}
           />
           <motion.line 
-            x1="30" y1="60" x2="15" y2="90" 
+            x1={30} y1={60} x2={15} y2={90} 
             stroke="black" strokeWidth="2" 
-            animate={{ x2: [15, 45], y2: [90, 80] }}
-            transition={{ duration: 0.5, repeat: Infinity, repeatType: "mirror" }}
+            animate={{ x2: [15, 45, 15], y2: [90, 80, 90] }}
+            transition={{ duration: 0.5, repeat: Infinity }}
           />
           <motion.line 
-            x1="30" y1="60" x2="45" y2="90" 
+            x1={30} y1={60} x2={45} y2={90} 
             stroke="black" strokeWidth="2" 
-            animate={{ x2: [45, 15], y2: [90, 80] }}
-            transition={{ duration: 0.5, repeat: Infinity, repeatType: "mirror" }}
+            animate={{ x2: [45, 15, 45], y2: [90, 80, 90] }}
+            transition={{ duration: 0.5, repeat: Infinity }}
           />
         </svg>
       </motion.div>
@@ -99,7 +99,7 @@ function Doodle({ type, style }: { type: DoodleType, style?: React.CSSProperties
         <svg viewBox="0 0 30 20" fill="none">
           <path d="M2 10 Q 15 0, 28 10 Q 15 20, 2 10" stroke="black" strokeWidth="1.5" />
           <motion.circle 
-            cx="15" cy="10" r="4" fill="black" 
+            cx={15} cy={10} r={4} fill="black" 
             animate={{ x: [-2, 2, -2], scaleY: [1, 0.1, 1] }}
             transition={{ 
               x: { duration: 3, repeat: Infinity, ease: "easeInOut" },
@@ -315,7 +315,7 @@ function App() {
             <p style={{ fontSize: '14px', lineHeight: '1.5', opacity: 0.7, marginBottom: '1.5rem' }}>
               Freelance developer from Kerala. I focus on bridging the gap between design and high-performance code. Always exploring, always building.
             </p>
-            <a href="/resume.pdf" target="_blank" className="resume-link mono-tiny">VIEW RESUME ↗</a>
+            <a href="https://drive.google.com/file/d/1aBFF-yJ1v8WPN-evsLxmXygnsi3rDFk8/view?usp=sharing" target="_blank" className="resume-link mono-tiny">VIEW RESUME ↗</a>
             <Doodle type="walking-man" style={{ position: 'absolute', top: '-100px', left: '-20px', opacity: 0.2, scale: 0.7 }} />
           </div>
           
