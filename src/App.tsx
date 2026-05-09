@@ -321,7 +321,7 @@ function App() {
           
           <Doodle type="sparkle" style={{ position: 'absolute', top: '25%', right: '10%', width: '40px', height: '40px' }} />
           <div className="hero-bottom reveal stagger-4">
-            <div className="mono-tiny">Thrissur, Kerala · 2026</div>
+           
             <div className="blinking-arrow">↓</div>
           </div>
         </RevealSection>
