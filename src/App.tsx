@@ -13,28 +13,28 @@ interface Project {
 const projects: Project[] = [
   {
     name: "Evently",
-    description: "Schedule and manage events, built for real use",
+    description: "Schedule and manage events",
     tech: "JS · NODE · CSS",
     url: "https://evently.jaideepdev.xyz",
     displayUrl: "evently.jaideepdev.xyz"
   },
   {
     name: "Smart Advisor Trans",
-    description: "Landing page for a transport advisory company",
+    description: "Transport advisory landing page",
     tech: "HTML · CSS · JS",
     url: "https://smartadvisortrans.com",
     displayUrl: "smartadvisortrans.com"
   },
   {
     name: "Clipnic",
-    description: "Landing page for a content clipping platform",
+    description: "Content clipping platform",
     tech: "REACT · NODE · CSS",
     url: "https://clipnic.com",
     displayUrl: "clipnic.com"
   },
   {
     name: "Clipnic Dashboard",
-    description: "Dual-role dashboard with automated YouTube analytics, video tracking and performance calculations",
+    description: "Automated YouTube analytics dashboard",
     tech: "REACT · NODE · NGINX",
     url: "https://dash.clipnic.com",
     displayUrl: "dash.clipnic.com"
@@ -270,26 +270,16 @@ function ProjectRow({ project }: { project: Project }) {
   const previewUrl = `https://api.microlink.io/?url=${encodeURIComponent(project.url)}&screenshot=true&meta=false&embed=screenshot.url`;
 
   return (
-    <div className="project-wrapper">
-      <div className="project-row reveal">
-        <span className="project-name">{project.name}</span>
-        <span className="project-desc-short">{project.description}</span>
-        <a href={project.url} target="_blank" rel="noopener noreferrer" className="project-url-link">
-          {project.displayUrl} <span style={{ fontSize: '0.8em' }}>↗</span>
-        </a>
-
-        <div className="project-bg-preview">
-          <img 
-            src={previewUrl} 
-            alt={project.name} 
-            className="bg-preview-img"
-            loading="lazy"
-          />
-          <div className="bg-preview-overlay"></div>
-        </div>
+    <div className="project-row reveal">
+      <div className="project-thumbnail">
+        <img src={previewUrl} alt={project.name} loading="lazy" />
       </div>
-      <div className="project-tech-row reveal mono-tiny">{project.tech}</div>
-      <div className="section-line"></div>
+      <span className="project-name">{project.name}</span>
+      <span className="project-tech-meta">{project.tech}</span>
+      <span className="project-desc-short">{project.description}</span>
+      <a href={project.url} target="_blank" rel="noopener noreferrer" className="project-url-link">
+        {project.displayUrl} ↗
+      </a>
     </div>
   );
 }
@@ -322,15 +312,16 @@ function App() {
               Open for interesting collaborations. Currently diving deep into modern stacks and experimental UI patterns.
             </p>
             <div className="label-tiny" style={{ marginBottom: '0.5rem', opacity: 0.4 }}>About Me</div>
-            <p style={{ fontSize: '14px', lineHeight: '1.5', opacity: 0.7 }}>
+            <p style={{ fontSize: '14px', lineHeight: '1.5', opacity: 0.7, marginBottom: '1.5rem' }}>
               Freelance developer from Kerala. I focus on bridging the gap between design and high-performance code. Always exploring, always building.
             </p>
+            <a href="/resume.pdf" target="_blank" className="resume-link mono-tiny">VIEW RESUME ↗</a>
             <Doodle type="walking-man" style={{ position: 'absolute', top: '-100px', left: '-20px', opacity: 0.2, scale: 0.7 }} />
           </div>
           
           <Doodle type="sparkle" style={{ position: 'absolute', top: '25%', right: '10%', width: '40px', height: '40px' }} />
           <div className="hero-bottom reveal stagger-4">
-            <div className="mono-tiny">Thrissur, Kerala · 2025</div>
+            <div className="mono-tiny">Thrissur, Kerala · 2026</div>
             <div className="blinking-arrow">↓</div>
           </div>
         </RevealSection>
@@ -351,7 +342,6 @@ function App() {
         </RevealSection>
 
         <RevealSection id="projects">
-          <Doodle type="eye" style={{ position: 'absolute', top: '5%', right: '30%' }} />
           <div className="label-tiny reveal">SELECTED WORK</div>
           <div className="projects-container">
             {projects.map((project, i) => (
@@ -359,19 +349,17 @@ function App() {
             ))}
           </div>
           <Doodle type="sparkle" style={{ position: 'absolute', bottom: '10%', right: '5%', width: '60px', height: '60px' }} />
-          <Doodle type="blob" style={{ position: 'absolute', left: '2%', top: '50%', opacity: 0.1 }} />
         </RevealSection>
 
         <RevealSection id="experience">
-          <Doodle type="worm" style={{ position: 'absolute', top: '5%', left: '40%' }} />
           <div className="label-tiny reveal">TIMELINE</div>
           <div className="timeline-container" style={{ position: 'relative' }}>
             <div className="timeline-row-v2 reveal stagger-1">
-              <div className="timeline-year">2024</div>
+              <div className="timeline-year">2025</div>
               <div className="timeline-desc">Completed Higher Secondary</div>
             </div>
             <div className="timeline-row-v2 reveal stagger-2">
-              <div className="timeline-year">2024 · NOW</div>
+              <div className="timeline-year">2025 · 2026</div>
               <div className="timeline-desc">Freelancing · building real products for real clients</div>
             </div>
             <div className="timeline-row-v2 reveal stagger-3">
@@ -383,18 +371,15 @@ function App() {
         </RevealSection>
 
         <RevealSection id="beyond-code">
-          <Doodle type="eye" style={{ position: 'absolute', top: '-10%', left: '45%' }} />
           <div style={{ position: 'relative', display: 'inline-block', width: '100%' }}>
             <p className="reveal">
               "Sometimes I shoot videos and think about why things look the way they do."
             </p>
             <Doodle type="underline" style={{ position: 'absolute', bottom: '-10px', left: '25%', width: '50%', height: '30px' }} />
           </div>
-          <Doodle type="blob" style={{ position: 'absolute', bottom: '-20%', left: '10%', opacity: 0.1 }} />
         </RevealSection>
 
         <RevealSection id="contact">
-          <Doodle type="eye" style={{ position: 'absolute', top: '10%', left: '5%' }} />
           <div style={{ position: 'relative' }}>
             <h2 className="reveal">LET'S BUILD SOMETHING</h2>
             <Doodle type="squiggle" style={{ position: 'absolute', top: '-30px', right: '0', width: '80px', height: '30px', transform: 'rotate(15deg)' }} />
