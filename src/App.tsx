@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { motion } from 'framer-motion'
+import { motion, type Variants } from 'framer-motion'
 import './index.css'
 
 interface Project {
@@ -44,7 +44,7 @@ const projects: Project[] = [
 type DoodleType = 'circle' | 'squiggle' | 'sparkle' | 'underline' | 'walking-man' | 'eye' | 'worm' | 'blob';
 
 function Doodle({ type, style }: { type: DoodleType, style?: React.CSSProperties }) {
-  const variants = {
+  const variants: Variants = {
     hidden: { pathLength: 0, opacity: 0 },
     visible: { 
       pathLength: 1, 
@@ -301,7 +301,6 @@ function App() {
       <div className="bg-gradient" />
       
       <main>
-        {/* 1. Hero */}
         <RevealSection id="hero">
           <Doodle type="eye" style={{ position: 'absolute', top: '15%', left: '10%' }} />
           <Doodle type="worm" style={{ position: 'absolute', top: '35%', right: '15%', transform: 'rotate(-10deg)' }} />
@@ -317,7 +316,6 @@ function App() {
             </p>
           </div>
 
-          {/* New Bottom Right About Me Section */}
           <div className="reveal stagger-3 hero-about-me">
             <div className="label-tiny" style={{ marginBottom: '0.5rem', opacity: 0.4 }}>Status</div>
             <p style={{ fontSize: '16px', fontStyle: 'italic', lineHeight: '1.4', marginBottom: '1.5rem' }}>
@@ -337,7 +335,6 @@ function App() {
           </div>
         </RevealSection>
 
-        {/* 2. About */}
         <RevealSection id="about">
           <Doodle type="blob" style={{ position: 'absolute', top: '20%', right: '5%', opacity: 0.2 }} />
           <div style={{ position: 'relative' }}>
@@ -353,7 +350,6 @@ function App() {
           <Doodle type="worm" style={{ position: 'absolute', bottom: '10%', right: '20%' }} />
         </RevealSection>
 
-        {/* 3. Projects */}
         <RevealSection id="projects">
           <Doodle type="eye" style={{ position: 'absolute', top: '5%', right: '30%' }} />
           <div className="label-tiny reveal">SELECTED WORK</div>
@@ -366,7 +362,6 @@ function App() {
           <Doodle type="blob" style={{ position: 'absolute', left: '2%', top: '50%', opacity: 0.1 }} />
         </RevealSection>
 
-        {/* 4. Experience */}
         <RevealSection id="experience">
           <Doodle type="worm" style={{ position: 'absolute', top: '5%', left: '40%' }} />
           <div className="label-tiny reveal">TIMELINE</div>
@@ -377,17 +372,16 @@ function App() {
             </div>
             <div className="timeline-row-v2 reveal stagger-2">
               <div className="timeline-year">2024 · NOW</div>
-              <div className="timeline-desc">Freelancing — building real products for real clients</div>
+              <div className="timeline-desc">Freelancing · building real products for real clients</div>
             </div>
             <div className="timeline-row-v2 reveal stagger-3">
               <div className="timeline-year">Ongoing</div>
-              <div className="timeline-desc">Exploring new stacks, frameworks, tools — always</div>
+              <div className="timeline-desc">Exploring new stacks, frameworks, tools · always</div>
             </div>
             <Doodle type="walking-man" style={{ position: 'absolute', bottom: '-20px', right: '10%' }} />
           </div>
         </RevealSection>
 
-        {/* 5. Beyond Code */}
         <RevealSection id="beyond-code">
           <Doodle type="eye" style={{ position: 'absolute', top: '-10%', left: '45%' }} />
           <div style={{ position: 'relative', display: 'inline-block', width: '100%' }}>
@@ -399,7 +393,6 @@ function App() {
           <Doodle type="blob" style={{ position: 'absolute', bottom: '-20%', left: '10%', opacity: 0.1 }} />
         </RevealSection>
 
-        {/* 6. Contact */}
         <RevealSection id="contact">
           <Doodle type="eye" style={{ position: 'absolute', top: '10%', left: '5%' }} />
           <div style={{ position: 'relative' }}>
