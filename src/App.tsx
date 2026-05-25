@@ -330,7 +330,7 @@ function App() {
           <Doodle type="blob" style={{ position: 'absolute', top: '20%', right: '5%', opacity: 0.2 }} />
           <div style={{ position: 'relative' }}>
             <p className="reveal">
-              I build things for the web — clean, functional, real. Currently freelancing while studying new stacks and figuring out what's next. I like working with people, picking up new tools fast, and occasionally pointing a camera at something interesting.
+              I build things for the web clean, functional, real. Currently freelancing while studying new stacks and figuring out what's next. I like working with people, picking up new tools fast, and occasionally pointing a camera at something interesting.
             </p>
             <Doodle type="squiggle" style={{ position: 'absolute', bottom: '-40px', left: '0', width: '100px', height: '40px' }} />
           </div>
