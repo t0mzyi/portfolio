@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="100%" height="100%">
+  <defs>
+    <linearGradient id="evently-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#evently-grad)" rx="16" />
+  <rect x="40" y="50" width="80" height="70" rx="8" fill="white" fill-opacity="0.15" stroke="white" stroke-width="2" />
+  <line x1="40" y1="75" x2="120" y2="75" stroke="white" stroke-width="2" />
+  <circle cx="60" cy="95" r="5" fill="white" />
+  <circle cx="80" cy="95" r="5" fill="white" />
+  <circle cx="100" cy="95" r="5" fill="white" />
+  <circle cx="60" cy="110" r="5" fill="white" />
+  <rect x="55" y="40" width="8" height="15" rx="3" fill="white" />
+  <rect x="97" y="40" width="8" height="15" rx="3" fill="white" />
+</svg>
